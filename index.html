@@ -46,34 +46,29 @@
                 alert('Selecciona dos puntos.');
                 return;
             }
-            try {
-                const response = await fetch('https://6cclgv3xi0.execute-api.us-east-1.amazonaws.com/deber_uber/move', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ pointA, pointB })
-                });
-                if (!response.ok) throw new Error(`Error: ${response.status}`);
 
-                const data = await response.json();
-                const route = data.route;
+            const response = await fetch('https://6cclgv3xi0.execute-api.us-east-1.amazonaws.com/deber_uber/move', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ pointA, pointB })
+            });
 
-                if (!marker) {
-                    marker = L.marker(route[0]).addTo(map);
-                }
+            const data = await response.json();
+            const route = data.route;
 
-                let step = 0;
-                function move() {
-                    if (step < route.length) {
-                        marker.setLatLng(route[step]);
-                        step++;
-                        setTimeout(move, 100);
-                    }
-                }
-                move();
-            } catch (error) {
-                console.error("Error al llamar a la API:", error);
-                alert("Error al obtener la ruta. Verifica la consola.");
+            if (!marker) {
+                marker = L.marker(route[0]).addTo(map);
             }
+
+            let step = 0;
+            function move() {
+                if (step < route.length) {
+                    marker.setLatLng(route[step]);
+                    step++;
+                    setTimeout(move, 100);
+                }
+            }
+            move();
         }
     </script>
 </body>
