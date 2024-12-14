@@ -8,7 +8,7 @@ Se implementa una pequeña aplicación en la que se muestra un mapa que permita 
 
 ## Arquitectura implementada
 
-<img width="698" alt="Captura de pantalla 2024-12-13 a la(s) 21 03 20" src="https://github.com/user-attachments/assets/a08445d0-cb14-4c60-bafc-4e3f51946b80" />
+<img width="698" alt="Captura de pantalla 2024-12-13 a la(s) 21 03 20" src="https://github.com/user-attachments/assets/a08445d0-cb14-4c60-bafc-4e3f51946b80">
 
 
 ## Como primer paso crearemos la función lambda
