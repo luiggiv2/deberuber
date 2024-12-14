@@ -6,6 +6,11 @@ Se implementa una pequeña aplicación en la que se muestra un mapa que permita 
 
 **API REST** en términos más simples, es un conjunto de reglas y estándares que permiten que diferentes aplicaciones se comuniquen entre sí. Permiten que las aplicaciones y servicios interactúen con los recursos y servicios proporcionados por AWS a través de la web, usando protocolos estándar como HTTP. Estas API se implementan en la arquitectura de AWS para permitir la comunicación entre clientes (como aplicaciones móviles, navegadores, o servidores) y los servicios de AWS de manera eficiente y escalable.
 
+## Arquitectura implementada
+
+<img width="698" alt="Captura de pantalla 2024-12-13 a la(s) 21 03 20" src="https://github.com/user-attachments/assets/a08445d0-cb14-4c60-bafc-4e3f51946b80" />
+
+
 ## Como primer paso crearemos la función lambda
 
 En este caso se ha creado la función lambda con python, a continuación se adjunta el código de la misma. 
